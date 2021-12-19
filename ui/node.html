@@ -96,19 +96,23 @@
                                         </h3>
                                     </div>
                                     <div v-if="!walletLoading">
+                                        <!-- <center> -->
                                         <button class="btn btn-primary" type="submit" @click="onCreateWallet">
                                             Create Key Pair
-                                        </button>
+                                        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <button class="btn btn-primary" type="submit" @click="onLoadWallet">
                                             Load Key Pair
                                         </button>
+                                        <!-- </center> -->
                                     </div>
+                                    <center>
                                     <div v-if="walletLoading" class="lds-ring">
                                         <div></div>
                                         <div></div>
                                         <div></div>
                                         <div></div>
                                     </div>
+                                    </center>
                                 </div>
                                 <div class="row no-gutters">
                                     <div class="col-lg-6 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
@@ -436,12 +440,15 @@
                                                 type="text" step="0.001" rows="10" placeholder="Type Message"
                                                 required></textarea>
                                         </div>
+                                        <center>
                                         <div v-if="txLoading" class="lds-ring">
                                             <div></div>
                                             <div></div>
                                             <div></div>
                                             <div></div>
                                         </div>
+                                        </center>
+                                        <br>
                                         <!-- <div class="my-3">
                                             <div class="loading">Loading</div>
                                             <div class="error-message"></div>
